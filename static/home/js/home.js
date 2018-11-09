@@ -1,19 +1,23 @@
 $(function () {
-    // 为了隐藏滚动条
+    // 隐藏滚动条后，导致页面过大的一个处理
     $('.home').width(innerWidth)
 
-    var topSwiper = new Swiper('#topSwiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoplay: 2500,
-        // loop: true,
+    new Swiper('#topSwiper', {
         pagination: '.swiper-pagination',
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 5,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        loop: true
     });
 
 
-    var mustbuySwiper = new Swiper('#mustbuySwiper', {
+     new Swiper('#mustbuySwiper', {
         slidesPerView: 3,
         spaceBetween: 10,
-        loop: true
-    })
+         loop: true
+    });
 })
